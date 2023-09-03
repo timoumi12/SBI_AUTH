@@ -1,0 +1,37 @@
+spring:
+    datasource:
+        url: jdbc:mysql://127.0.0.1:3306/sbi_auth?user=root
+        username: root
+        password: seQuel00.0
+        driver-class-name: com.mysql.cj.jdbc.Driver
+    mail:
+        host: smtp.gmail.com
+        port: 587
+        username: emailtestingtool1.0@gmail.com
+        password: dgffkvxtsdiweunz
+        properties:
+            mail:
+                smtp:
+                    auth: true
+                    starttls:
+                        enable: true
+#jwt
+app:
+    jwtSecret: "MIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAo6l4NX/tUn259dvasJpysMQ5m4lJW1vPiR/UeXC/ZS4JhGG+MzuUlvtws8ar490HP5cA8IN4ELF9l13t2FNppBcqloKJwYOA5Z7mPhZ6qdZbI7pl6r7BTCSRvzaMy6Y0uHBxl+lx1EDeHzt4K/w5hoQvVc45G7YffHphG1w0obQRd5r5bzx/pDJk4XJocUdze14hcFWxLd3z4Eg+OhWt8GKS92nnP9LKPqgvzmEhA5RgXtcyCJJz6c/7zjN6ap1V3Ed7NbQQtvJv+PTWeQhJceamigyrPthFbnmG0A2q9sPt4lAGjDOyxBm+o5o4syQJ8tQBNBEUBRUYdB4Uf+jYvdiLtvBVEyWFLOnw8MNOz3P9NNmCEZhoM8UOsGAhK32OGwhcFGVn6wANhJogdpITmQFth7IJb/KH8u7kNfPLCxingi8I7b5OpIw9xvuLXzOX4UorUCi7iWYwWngyfVH1xqv5baLKjgeivumxHcvnZlRz+/r9YIKMmL/gM0vQoIoKVRP9jyaFYAmwzbYVSRv2CVoArAIscp3rfQN7pXFKMWypBcLb+sMph4gru34P1m7GLwWIsZ8iIWi5qKp9zsM9ZXWEaZ9BvjPRHYIp51RwzsdGfb7cZWLbf0Z1bdKbtky7aycV/Xx6bD/Gg5XKsy9rizrTA4Pf1XVBye5s5LhmMJkCAwEAAQ=="
+    jwtExpirationMs: 86400000
+##specify DBMS
+    jpa:
+        hibernate:
+            ddl-auto: update
+        database: MYSQL
+        show-sql: true
+        properties:
+            hibernate:
+                format_sql: true
+        dialect: org.hibernate.dialect.MySQL5Dialect
+    webflux:
+        cors:
+            allowed-origins:
+                - http://localhost:4200
+            allowed-methods: GET, POST, PUT, DELETE
+            allowed-headers: Authorization, Content-Type

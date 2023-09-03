@@ -1,0 +1,2 @@
+# SBI_AUTH
+ This project focuses on enhancing authentication, user account management, and seamless integration with external APIs, bolstering security and user convenience. Key features include JWT authentication, password recovery, two-factor authentication, and robust access control. Additionally, Sage API integration streamlines processes, and comprehensive error handling ensures uninterrupted operation.

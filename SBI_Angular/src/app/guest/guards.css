@@ -1,0 +1,30 @@
+/* Common styles for forms */
+.form-group {
+    margin-bottom: 20px;
+  }
+  
+  /* Button styles */
+  .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+  
+  /* Link styles */
+  a {
+    text-decoration: none;
+    color: darkgray;
+  }
+  
+  /* Card styles */
+  .card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+  }
+  
+  /* Container styles */
+  .container {
+    margin-top: 50px;
+  }
+  

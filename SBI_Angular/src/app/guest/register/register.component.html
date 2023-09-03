@@ -1,0 +1,110 @@
+<div class="container mt-5">
+  <div class="card ms-auto me-auto p-3 shadow-lg custom-card">
+    <form
+      #registerForm="ngForm"
+      (ngSubmit)="register()"
+      >
+      <div class="alert alert-danger" *ngIf="errorMessage">
+        {{ errorMessage }}
+      </div>
+      <div class="form-group">
+        <label for="firstname">First Name</label>
+        <input
+          type="text"
+          id="firstname"
+          name="firstname"
+          #username="ngModel"
+          class="form-control"
+          required
+          [(ngModel)]="user.firstname"
+        />
+        <div
+          class="alert-danger"
+          *ngIf="registerForm.submitted"
+        >
+          First Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastname">Last Name</label>
+        <input
+          type="text"
+          id="lastname"
+          name="lastname"
+          #username="ngModel"
+          class="form-control"
+          required
+          [(ngModel)]="user.lastname"
+        />
+        <div
+          class="alert-danger"
+          *ngIf="registerForm.submitted"
+        >
+          Last Name is required
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          #username="ngModel"
+          class="form-control"
+          required
+          [(ngModel)]="user.email"
+        />
+        <div
+          class="alert-danger"
+          *ngIf="username.invalid && registerForm.submitted"
+        >
+          Last Name is required
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="role">Role</label>
+        <input
+          type="text"
+          id="role"
+          name="role"
+          #username="ngModel"
+          class="form-control"
+          required
+          [(ngModel)]="user.role"
+        />
+        <!-- <<div
+          class="alert-danger"
+          *ngIf="role.invalid && registerForm.submitted"
+        >
+          Role is required
+        </div>> -->
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          name="password"
+          #password="ngModel"
+          class="form-control"
+          required
+          [(ngModel)]="user.password"
+        />
+        <div
+          class="alert-danger"
+          *ngIf="password.invalid && registerForm.submitted"
+        >
+          Password is required
+        </div>
+      </div>
+      <button
+        type="submit"
+        class="btn btn-success w-100 mt-3"
+      >
+        Sign up
+      </button>
+    </form>
+    <a [routerLink]="['/login']" class="btn btn-link">You have an account?</a>
+  </div>
+</div>

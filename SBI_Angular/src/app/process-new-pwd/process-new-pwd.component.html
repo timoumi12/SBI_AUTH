@@ -1,8 +1,10 @@
-<div class="container mt-5">
-    <div class="card ms-auto me-auto p-3 shadow-lg custom-card">
+<div style="background-color: #222831; height: 100vh; display: flex; justify-content: center; align-items: center;">
+    <div style="width: 33%; min-height: 370px; display: flex; flex-direction: column; justify-content: space-between; align-items: center; background-color: #eee; padding: 25px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+      <h2>Reset Your Password</h2>
       <form
         #registerForm="ngForm"
         (ngSubmit)="registerForm.form.valid && onSubmit()"
+        style="width: 90%; display: flex; flex-direction: column; justify-content: space-around; height: 200px; align-items: center;"
       >
         <!-- <div class="alert alert-danger" *ngIf="errorMessage">
           {{ errorMessage }}
@@ -16,7 +18,7 @@
             class="form-control"
             [(ngModel)]="formData.password"
             required
-            style="margin-bottom: 20px; margin-top: 20px;"
+            style="margin-bottom: 10px; margin-top: 10px;"
           />
           <div
             class="alert-danger"
@@ -45,7 +47,8 @@
           </div>
         <button
           type="submit"
-          class="btn btn-success w-100 mt-3"
+          class="btn"
+          style="margin-bottom: 20px; background-color: #00ADB5; color: #fff; border-radius: 5px; width: 50%;"
         >
           Confirm
         </button>

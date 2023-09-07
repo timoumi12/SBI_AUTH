@@ -10,6 +10,7 @@ import { AuthGuard } from './guards/auth.guard';
 import { Role } from './models/role.enum';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ProcessNewPwdComponent } from './process-new-pwd/process-new-pwd.component'
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -24,6 +25,7 @@ const routes: Routes = [
     canActivate: [AuthGuard],
     data: { roles: [Role.ADMIN, Role.SUPERVISOR, Role.USER] },
   },
+  {path: 'user_profile', component: UserProfileComponent},
   { path: '404', component: NotFoundComponent },
   { path: '401', component: UnauthorizedComponent },
 ];

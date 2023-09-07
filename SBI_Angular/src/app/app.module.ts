@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { ProcessNewPwdComponent } from './process-new-pwd/process-new-pwd.component';
+import { UserProfileComponent } from './user-profile/user-profile.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ProcessNewPwdComponent } from './process-new-pwd/process-new-pwd.compon
     UnauthorizedComponent,
     ForgotPasswordComponent,
     ProcessNewPwdComponent,
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,

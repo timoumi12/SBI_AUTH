@@ -10,6 +10,7 @@ const API_URL = `${environment.BASE_URL}/api/auth/`;
   providedIn: 'root',
 })
 export class AuthenticationService {
+  userData: any;
   public currentUser: Observable<User>;
   private headers = new HttpHeaders({'Content-Type': 'application/json'});
   private currentUserSubject: BehaviorSubject<User>; //! test if i can remove "BehaviorSubject<User>"

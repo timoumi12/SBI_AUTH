@@ -1,56 +1,63 @@
-<div class="container mt-5">
-  <div class="card ms-auto me-auto p-3 shadow-lg custom-card">
-    <form
-      #registerForm="ngForm"
-      (ngSubmit)="registerForm.form.valid && login()"
-    >
-      <div class="alert alert-danger" *ngIf="errorMessage">
-        {{ errorMessage }}
-      </div>
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          #username="ngModel"
-          class="form-control"
-          required
-          [(ngModel)]="user.email"
-        />
-        <div
-          class="alert-danger"
-          *ngIf="username.invalid && registerForm.submitted"
-        >
-          Username is required
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          #password="ngModel"
-          class="form-control"
-          required
-          [(ngModel)]="user.password"
-        />
-        <div
-          class="alert-danger"
-          *ngIf="password.invalid && registerForm.submitted"
-        >
-          Password is required
-        </div>
-      </div>
-      <button
-        type="submit"
-        class="btn btn-success w-100 mt-3"
+<div style="background-color: #222831; height: 100vh; display: flex; justify-content: center; align-items: center;">
+  <div>
+    <div style="width: 100%; min-height: 45%; display: flex; flex-direction: column; justify-content: space-between; align-items: center; background-color: #eee; padding: 25px; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);">
+      <h1>Sign In</h1>
+      <form
+        #registerForm="ngForm"
+        (ngSubmit)="registerForm.form.valid && login()"
+        style="display: flex; flex-direction: column; justify-content: space-around; height: 300px; align-items: flex-start;"
       >
-        Sign in
-      </button>
-    </form>
-    <a [routerLink]="['/password_recovery']" class="btn btn-link">Forgot Password?</a>
-    <a [routerLink]="['/register']" class="btn btn-link">I don't have an account!</a>
+        <div class="alert alert-danger" *ngIf="errorMessage">
+          {{ errorMessage }}
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input
+            type="text"
+            id="username"
+            name="username"
+            #username="ngModel"
+            class="form-control"
+            required
+            [(ngModel)]="user.email"
+          />
+          <div
+            class="alert-danger"
+            *ngIf="username.invalid && registerForm.submitted"
+          >
+            Username is required
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            #password="ngModel"
+            class="form-control"
+            required
+            [(ngModel)]="user.password"
+          />
+          <div
+            class="alert-danger"
+            *ngIf="password.invalid && registerForm.submitted"
+          >
+            Password is required
+          </div>
+        </div>
+        <button
+          type="submit"
+          class="btn"
+          style="background-color: #00ADB5; color: #fff; border-radius: 5px; width: 100%;"
+        >
+          Sign in
+        </button>
+      </form>
+      <div class="side-links">
+        <a [routerLink]="['/password_recovery']" class="btn btn-link">Forgot Password?</a>
+        <a [routerLink]="['/register']" class="btn btn-link">I don't have an account!</a>
+      </div>
+    </div>
   </div>
 </div>

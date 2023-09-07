@@ -124,6 +124,8 @@ public class AuthenticationController {
             return ResponseEntity.ok(new AuthenticationResponse(jwt,
                     user.getId(),
                     user.getEmail(),
+                    user.getFirstname(),
+                    user.getLastname(),
                     roleName)
             );
         } catch (BadCredentialsException e) {

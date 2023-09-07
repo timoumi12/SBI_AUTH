@@ -1,0 +1,28 @@
+.side-links {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  h1 {
+    color: #00ADB5;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  label {
+    font-weight: 550;
+    margin-bottom: 10px;
+  }
+
+  strong {
+    color: #393E46;
+    font-size: 21px;
+    margin: 40px 20px;
+  }
+
+  span {
+    color: #00ADB5;
+    font-size: 19px;
+    font-weight: 500;
+  }
